@@ -1,0 +1,64 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact us</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/sell.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    
+    {% include 'css.html' %}
+
+</head>
+<style>
+    body{
+        /* background: orange; */
+        /* background : linear-gradient(-60deg, rgb(255, 60, 0), rgb(0, 0, 0));; */
+    }
+</style>
+<body>
+    {% include 'nav.html' %}
+    <div class="banner">
+        <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('../static/img/bg-header.jpeg');">
+            <div class="container">
+                <h1 class="pt-5">
+                    Shopping Page
+                </h1>
+                <p class="lead">
+                    Save time and leave the groceries to us.
+                </p>
+            </div>
+        </div>
+    </div>
+
+	<div class="container">  
+        <form id="contact" action="" method="post">
+          <h3>Colorlib Contact Form</h3>
+          <h4>Contact us for custom quote</h4>
+          <fieldset>
+            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Email Address" type="email" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          </fieldset>
+          <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a></p>
+        
+        </form>
+      </div>
+      {% include 'footer.html' %}
+      {% include 'js.html' %}
+</body>
+</html>

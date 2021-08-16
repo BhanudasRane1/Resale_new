@@ -21,6 +21,7 @@ urlpatterns = [
     path('setting', Setting_View.as_view(), name='setting_url'),
     path('terms', Terms_View.as_view(), name='terms_url'),
     path('transaction', Transaction_View.as_view(), name='transaction_url'),
+    path('sell/', Sell_View.as_view(), name='sell_url'),
    
 
     

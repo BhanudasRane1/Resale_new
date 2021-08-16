@@ -12,7 +12,7 @@
     {% include 'nav.html' %}
     <div id="page-content" class="page-content">
         <div class="banner">
-            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg-header.jpg');">
+            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('../static/img/bg-header.jpeg');">
                 <div class="container">
                     <h1 class="pt-5">
                         The Meat Product Title
@@ -28,32 +28,32 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="slider-zoom">
-                            <a href="assets/img/meats.jpg" class="cloud-zoom" rel="transparentImage: 'data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==', useWrapper: false, showTitle: false, zoomWidth:'500', zoomHeight:'500', adjustY:0, adjustX:10" id="cloudZoom">
-                                <img alt="Detail Zoom thumbs image" src="assets/img/meats.jpg" style="width: 100%;">
-                            </a>
+                            <!-- <a href="assets/img/meats.jpg" class="cloud-zoom" rel="transparentImage: 'data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==', useWrapper: false, showTitle: false, zoomWidth:'500', zoomHeight:'500', adjustY:0, adjustX:10" id="cloudZoom"> -->
+                                <img alt="Detail Zoom thumbs image" src="{% static '../static/img/book/bk1.jpg' %}" style="width: 100%;">
+                            <!-- </a> -->
                         </div>
 
                         <div class="slider-thumbnail">
                             <ul class="d-flex flex-wrap p-0 list-unstyled">
                                 <li>
-                                    <a href="assets/img/meats.jpg" rel="gallerySwitchOnMouseOver: true, popupWin:'assets/img/meats.jpg', useZoom: 'cloudZoom', smallImage: 'assets/img/meats.jpg'" class="cloud-zoom-gallery">
-                                        <img itemprop="image" src="assets/img/meats.jpg" style="width:135px;">
-                                    </a>
+                                    <!-- <a href="" rel="gallerySwitchOnMouseOver: true, popupWin:'assets/img/meats.jpg', useZoom: 'cloudZoom', smallImage: 'assets/img/meats.jpg'" class="cloud-zoom-gallery"> -->
+                                        <img itemprop="image" src="{% static '../static/img/book/bk2.jpg' %}" style="width:135px;">
+                                    <!-- </a> -->
                                 </li>
                                 <li>
-                                    <a href="assets/img/fish.jpg" rel="gallerySwitchOnMouseOver: true, popupWin:'assets/img/fish.jpg', useZoom: 'cloudZoom', smallImage: 'assets/img/fish.jpg'" class="cloud-zoom-gallery">
-                                        <img itemprop="image" src="assets/img/fish.jpg" style="width:135px;">
-                                    </a>
+                                    <!-- <a href="" rel="gallerySwitchOnMouseOver: true, popupWin:'assets/img/fish.jpg', useZoom: 'cloudZoom', smallImage: 'assets/img/fish.jpg'" class="cloud-zoom-gallery"> -->
+                                        <img itemprop="image" src="{% static '../static/img/book/bk3.jpg' %}" style="width:135px;">
+                                    <!-- </a> -->
                                 </li>
                                 <li>
-                                    <a href="assets/img/vegetables.jpg" rel="gallerySwitchOnMouseOver: true, popupWin:'assets/img/vegetables.jpg', useZoom: 'cloudZoom', smallImage: 'assets/img/vegetables.jpg'" class="cloud-zoom-gallery">
-                                        <img itemprop="image" src="assets/img/vegetables.jpg" style="width:135px;">
-                                    </a>
+                                    <!-- <a href="" rel="gallerySwitchOnMouseOver: true, popupWin:'assets/img/vegetables.jpg', useZoom: 'cloudZoom', smallImage: 'assets/img/vegetables.jpg'" class="cloud-zoom-gallery"> -->
+                                        <img itemprop="image" src="{% static '../static/img/book/bk4.jpg' %}" style="width:135px;">
+                                    <!-- </a> -->
                                 </li>
                                 <li>
-                                    <a href="assets/img/frozen.jpg" rel="gallerySwitchOnMouseOver: true, popupWin:'assets/img/frozen.jpg', useZoom: 'cloudZoom', smallImage: 'assets/img/frozen.jpg'" class="cloud-zoom-gallery">
-                                        <img itemprop="image" src="assets/img/frozen.jpg" style="width:135px;">
-                                    </a>
+                                    <!-- <a href="" rel="gallerySwitchOnMouseOver: true, popupWin:'assets/img/frozen.jpg', useZoom: 'cloudZoom', smallImage: 'assets/img/frozen.jpg'" class="cloud-zoom-gallery"> -->
+                                        <img itemprop="image" src="{% static '../static/img/book/bk5.jpg' %}" style="width:135px;">
+                                    <!-- </a> -->
                                 </li>
                             </ul>
                         </div>
@@ -94,7 +94,7 @@
                         </div>
 
                         <button class="mt-3 btn btn-primary btn-lg">
-                            <i class="fa fa-shopping-basket"></i> Add to Cart
+                            <i class="fa fa-shopping-basket"></i> Quick View
                         </button>
                     </div>
                 </div>
@@ -123,18 +123,18 @@
                                                 20% OFF
                                             </span>
                                         </div>
-                                        <img src="assets/img/meats.jpg" alt="Card image 2" class="card-img-top">
+                                        <img src="{% static '../static/img/book/bk6.jpg' %}" alt="Card image 2" class="card-img-top">
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="detail-product.html">Product Title</a>
+                                            <a href="/detail-product">Product Title</a>
                                         </h4>
                                         <div class="card-price">
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a href="detail-product.html" class="btn btn-block btn-primary">
-                                            Add to Cart
+                                        <a href="/detail-product" class="btn btn-block btn-primary">
+                                            Quick View
                                         </a>
 
                                     </div>
@@ -156,18 +156,18 @@
                                                 20% OFF
                                             </span>
                                         </div>
-                                        <img src="assets/img/fish.jpg" alt="Card image 2" class="card-img-top">
+                                        <img src="{% static '../static/img/book/bk7.jpg' %}" alt="Card image 2" class="card-img-top">
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="detail-product.html">Product Title</a>
+                                            <a href="/detail-product">Product Title</a>
                                         </h4>
                                         <div class="card-price">
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a href="detail-product.html" class="btn btn-block btn-primary">
-                                            Add to Cart
+                                        <a href="/detail-product" class="btn btn-block btn-primary">
+                                            Quick View
                                         </a>
 
                                     </div>
@@ -189,18 +189,18 @@
                                                 20% OFF
                                             </span>
                                         </div>
-                                        <img src="assets/img/vegetables.jpg" alt="Card image 2" class="card-img-top">
+                                        <img src="{% static '../static/img/book/bk8.jpg' %}" alt="Card image 2" class="card-img-top">
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="detail-product.html">Product Title</a>
+                                            <a href="/detail-product">Product Title</a>
                                         </h4>
                                         <div class="card-price">
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a href="detail-product.html" class="btn btn-block btn-primary">
-                                            Add to Cart
+                                        <a href="/detail-product" class="btn btn-block btn-primary">
+                                            Quick View
                                         </a>
 
                                     </div>
@@ -222,18 +222,18 @@
                                                 20% OFF
                                             </span>
                                         </div>
-                                        <img src="assets/img/frozen.jpg" alt="Card image 2" class="card-img-top">
+                                        <img src="{% static '../static/img/book/bk9.jpg' %}" alt="Card image 2" class="card-img-top">
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="detail-product.html">Product Title</a>
+                                            <a href="/detail-product">Product Title</a>
                                         </h4>
                                         <div class="card-price">
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a href="detail-product.html" class="btn btn-block btn-primary">
-                                            Add to Cart
+                                        <a href="/detail-product" class="btn btn-block btn-primary">
+                                            Quick View
                                         </a>
 
                                     </div>
@@ -255,18 +255,18 @@
                                                 20% OFF
                                             </span>
                                         </div>
-                                        <img src="assets/img/fruits.jpg" alt="Card image 2" class="card-img-top">
+                                        <img src="{% static '../static/img/book/bk10.jpg' %}" alt="Card image 2" class="card-img-top">
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="detail-product.html">Product Title</a>
+                                            <a href="/detail-product">Product Title</a>
                                         </h4>
                                         <div class="card-price">
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a href="detail-product.html" class="btn btn-block btn-primary">
-                                            Add to Cart
+                                        <a href="/detail-product" class="btn btn-block btn-primary">
+                                            Quick View
                                         </a>
 
                                     </div>

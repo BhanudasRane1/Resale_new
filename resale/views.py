@@ -16,6 +16,11 @@ class About_View(View):
      def get(self,request):
          template = 'about.html'
          return render(request, template)
+         
+class Sell_View(View):             
+     def get(self,request):
+         template = 'sell.html'
+         return render(request, template)
 
 class Cart_View(View):             
      def get(self,request):
