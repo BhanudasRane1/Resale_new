@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.conf import settings
 from django.contrib import messages
 from .forms import *
+from math import ceil
 from django.views.generic import View 
 # Create your views here.
 
@@ -94,10 +95,23 @@ class Setting_View(View):
          template = 'setting.html'
          return render(request, template)
           
-class Shop_View(View):             
-     def get(self,request):
-         template = 'shop.html'
-         return render(request, template)
+class Shop_View(View):
+    def get(self,request):
+        allProds=[]
+        catProds = sell_product.objects.values('year','id')
+        cats = {item['year'] for item in catProds}
+        for cat in cats:
+            prod = sell_product.objects.filter(year =cat)
+            n = len(prod)
+            nSlides = n // 4 + ceil((n / 4) - (n // 4))
+            allProds.append([prod,range(1,nSlides),nSlides])
+    
+        params = {'allProds':allProds}
+        template = 'shop.html'
+        print(cats)
+        print(nSlides)
+        
+        return render(request, template,params)
           
 class Terms_View(View):             
      def get(self,request):
