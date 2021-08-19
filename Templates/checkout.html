@@ -12,7 +12,7 @@
     {% include 'nav.html' %}
     <div id="page-content" class="page-content">
         <div class="banner">
-            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg-header.jpg');">
+            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('../static/img/bg-header.jpeg');">
                 <div class="container">
                     <h1 class="pt-5">
                         Checkout
@@ -27,60 +27,16 @@
         <section id="checkout">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-7">
-                        <h5 class="mb-3">BILLING DETAILS</h5>
-                        <!-- Bill Detail of the Page -->
-                        <form action="#" class="bill-detail">
-                            <fieldset>
-                                <div class="form-group row">
-                                    <div class="col">
-                                        <input class="form-control" placeholder="Name" type="text">
-                                    </div>
-                                    <div class="col">
-                                        <input class="form-control" placeholder="Last Name" type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Company Name" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="Address"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Town / City" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="State / Country" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Postcode / Zip" type="text">
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col">
-                                        <input class="form-control" placeholder="Email Address" type="email">
-                                    </div>
-                                    <div class="col">
-                                        <input class="form-control" placeholder="Phone Number" type="tel">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox"> Ship to a different address?
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="Order Notes"></textarea>
-                                </div>
-                            </fieldset>
-                        </form>
-                        <!-- Bill Detail of the Page end -->
-                    </div>
+                   
                     <div class="col-xs-12 col-sm-5">
                         <div class="holder">
                             <h5 class="mb-3">YOUR ORDER</h5>
                             <div class="table-responsive">
-                                <table class="table">
+                                <!-- <table class="table">
                                     <thead>
                                         <tr>
                                             <th>Products</th>
+                                            <th>Type </th>
                                             <th class="text-right">Subtotal</th>
                                         </tr>
                                     </thead>
@@ -136,10 +92,189 @@
                                             </td>
                                         </tr>
                                     </tfooter>
-                                </table>
+                                </table> -->
+                            
+                            
+                            
+                            
+                                <table class="table table-bordered table-striped table-hover">
+                                    <thead class="thead-dark">
+                                      <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Type of book</th>
+                                        <th>price</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      {% if product.image_a %}
+                                      <tr>
+                                        <td>
+                
+                                          1
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.book_name_a}}
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.book_type_a}}
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.price_a}}
+                
+                                        </td>
+                
+                
+                                      </tr>
+                                      {% endif %}
+                                      {% if product.image_b %}
+                                      <tr>
+                                        <td>
+                
+                                          2
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.book_name_b}}
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.book_type_b}}
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.price_b}}
+                
+                                        </td>
+                
+                
+                                      </tr>
+                                      {% endif %}
+                                      {% if product.image_c %}
+                                      <tr>
+                                        <td>
+                
+                                          3
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.book_name_c}}
+                
+                                        </td>
+                                        <td>
+                                          {{product.book_type_c}}
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.price_c}}
+                
+                                        </td>
+                                      </tr>
+                                      {% endif %}
+                                      {% if product.image_d %}
+                                      <tr>
+                                        <td>
+                
+                                          4
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.book_name_d}}
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.book_type_d}}
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.price_d}}
+                
+                                        </td>
+                                      </tr>
+                                      {% endif %}
+                                      {% if product.image_e %}
+                                      <tr>
+                                        <td>
+                
+                                          5
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.book_name_e}}
+                
+                                        </td>
+                                        <td>
+                                          {{product.book_type_e}}
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.price_e}}
+                
+                                        </td>
+                                      </tr>
+                                      {% endif %}
+                                      <tr>
+                                        {% if product.image_f %}
+                                      <tr>
+                                        <td>
+                
+                                          6
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.book_name_f}}
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.book_type_f}}
+                
+                                        </td>
+                                        <td>
+                
+                                          {{product.price_f}}
+                
+                                        </td>
+                
+                
+                                      </tr>
+                                      {% endif %}
+                
+                                      </tr>
+
+                                    </tbody>
+                                    <!-- <tfooter>
+                                        
+                                        <tr>
+                                            <td>
+                                                <strong>ORDER TOTAL</strong>
+                                            </td>
+                                            <td class="text-right">
+                                                <strong>Rp 200.000</strong>
+                                            </td>
+                                        </tr>
+                                    </tfooter> -->
+                                  </table>
                             </div>
 
-                            <h5 class="mb-3">PAYMENT METHODS</h5>
+                            <!-- <h5 class="mb-3">PAYMENT METHODS</h5>
                             <div class="form-check-inline">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
@@ -151,12 +286,12 @@
                                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
                                     Credit Card
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                         <p class="text-right mt-3">
                             <input checked="" type="checkbox"> I’ve read &amp; accept the <a href="#">terms &amp; conditions</a>
                         </p>
-                        <a href="#" class="btn btn-primary float-right">PROCEED TO CHECKOUT <i class="fa fa-check"></i></a>
+                        <a href="{% url 'detail-product_url' %}" class="btn btn-primary float-right">PROCEED TO INQUIRY <i class="fa fa-check"></i></a>
                         <div class="clearfix">
                     </div>
                 </div>

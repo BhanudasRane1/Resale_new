@@ -1,6 +1,7 @@
 {% load static %}
 {% load widget_tweaks %}
 
+
 <div class="page-header">
     <!--=============== Navbar ===============-->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
@@ -27,9 +28,19 @@
                     <!-- <li class="nav-item">
                         <a href="{% url 'register_url' %}" class="nav-link">Register</a>
                     </li> -->
+                    {% if user.is_authenticated %}
+
+
+                    <li class="nav-item">
+                        <a href="{% url 'login_url' %}" class="nav-link">Logout</a>
+                    </li>
+                    {% else %}
+
                     <li class="nav-item">
                         <a href="{% url 'login_url' %}" class="nav-link">Login</a>
                     </li>
+
+                    {% endif %}
                     <li class="nav-item">
                         <a href="{% url 'sell_url' %}" class="nav-link">Sell</a>
                     </li>
@@ -44,9 +55,15 @@
                     <li class="nav-item">
                         <a href="accounts/login" class="nav-link">Login</a>
                     </li> -->
+
+                    
+  
+                        
+                      
+                    {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="avatar-header"><img src="{% static '../static/img/logo/avatar.jpg' %}"></div> John Doe
+                        <a id= "username" style="font-weight: bold;    color: violet;" class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="avatar-header"><img src="{% static '../static/img/logo/avatar.jpg' %}"></div>  {{user.first_name.0.upper}}        
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             
@@ -54,6 +71,8 @@
                             <a class="dropdown-item" href="{% url 'setting_url' %}" >Settings</a>
                         </div>
                       </li>
+
+                      {% endif %}
                     <!-- <li class="nav-item dropdown">
                         <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-shopping-basket"></i> <span class="badge badge-primary">5</span>

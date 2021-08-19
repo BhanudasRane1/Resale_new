@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.conf import settings
-
+from django.contrib import messages
 from .forms import *
 from django.views.generic import View 
 # Create your views here.
@@ -27,7 +27,19 @@ class Sell_View(View):
          }
 
          return render(request, template,context)
-         
+
+    def post(self,request):
+        template= 'sell.html'
+        sell_form = sell_product_form(request.POST, request.FILES or None )
+        if  sell_form.is_valid():
+            sell_form = sell_form.save()
+            messages.success(request, "Sell Book Order Placed Successfully!")
+            return redirect('sell_url')
+        else:
+            messages.warning(request, "Something went Wrong!")
+            return render(request, template) 
+        
+        
 class Detail_product_View(View):
     def get(self,request):
          template = 'detail-product.html'

@@ -33,8 +33,8 @@
                                 <thead>
                                     <tr>
                                         <th width="5%"></th>
-                                        <th>Invoice</th>
-                                        <th>Date</th>
+                                        <th>ID</th>
+                                        <th>SELLER NAME</th>
                                         <th>Total</th>
                                         <th>Status</th>
                                         <th></th>
@@ -53,7 +53,7 @@
                                             Rp 200.000
                                         </td>
                                         <td>
-                                            Delivered
+                                            Not Accepted 
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#detailModal">
@@ -120,56 +120,171 @@
                                     <strong>Your Order:</strong>
                                 </p>
                                 <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Products</th>
-                                                <th class="text-right">Subtotal</th>
-                                            </tr>
+                                    <table class="table table-bordered table-striped table-hover">
+                                        <thead class="thead-dark">
+                                          <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Type of book</th>
+                                            <th>price</th>
+                                          </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>
-                                                    Ikan Segar x1
-                                                </td>
-                                                <td class="text-right">
-                                                    Rp 30.000
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Sirloin x1
-                                                </td>
-                                                <td class="text-right">
-                                                    Rp 120.000
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Mix Vegetables x1
-                                                </td>
-                                                <td class="text-right">
-                                                    Rp 30.000
-                                                </td>
-                                            </tr>
+                                          {% if product.image_a %}
+                                          <tr>
+                                            <td>
+                    
+                                              1
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.book_name_a}}
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.book_type_a}}
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.price_a}}
+                    
+                                            </td>
+                    
+                    
+                                          </tr>
+                                          {% endif %}
+                                          {% if product.image_b %}
+                                          <tr>
+                                            <td>
+                    
+                                              2
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.book_name_b}}
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.book_type_b}}
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.price_b}}
+                    
+                                            </td>
+                    
+                    
+                                          </tr>
+                                          {% endif %}
+                                          {% if product.image_c %}
+                                          <tr>
+                                            <td>
+                    
+                                              3
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.book_name_c}}
+                    
+                                            </td>
+                                            <td>
+                                              {{product.book_type_c}}
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.price_c}}
+                    
+                                            </td>
+                                          </tr>
+                                          {% endif %}
+                                          {% if product.image_d %}
+                                          <tr>
+                                            <td>
+                    
+                                              4
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.book_name_d}}
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.book_type_d}}
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.price_d}}
+                    
+                                            </td>
+                                          </tr>
+                                          {% endif %}
+                                          {% if product.image_e %}
+                                          <tr>
+                                            <td>
+                    
+                                              5
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.book_name_e}}
+                    
+                                            </td>
+                                            <td>
+                                              {{product.book_type_e}}
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.price_e}}
+                    
+                                            </td>
+                                          </tr>
+                                          {% endif %}
+                                          <tr>
+                                            {% if product.image_f %}
+                                          <tr>
+                                            <td>
+                    
+                                              6
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.book_name_f}}
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.book_type_f}}
+                    
+                                            </td>
+                                            <td>
+                    
+                                              {{product.price_f}}
+                    
+                                            </td>
+                    
+                    
+                                          </tr>
+                                          {% endif %}
+                    
+                                          </tr>
+    
                                         </tbody>
-                                        <tfooter>
-                                            <tr>
-                                                <td>
-                                                    <strong>Cart Subtotal</strong>
-                                                </td>
-                                                <td class="text-right">
-                                                    Rp 180.000
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <strong>Shipping</strong>
-                                                </td>
-                                                <td class="text-right">
-                                                    Rp 20.000
-                                                </td>
-                                            </tr>
+                                        <!-- <tfooter>
+                                            
                                             <tr>
                                                 <td>
                                                     <strong>ORDER TOTAL</strong>
@@ -178,8 +293,8 @@
                                                     <strong>Rp 200.000</strong>
                                                 </td>
                                             </tr>
-                                        </tfooter>
-                                    </table>
+                                        </tfooter> -->
+                                      </table>
                                 </div>
                             </div>
                         </div>
