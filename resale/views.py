@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.conf import settings
 
-
+from .forms import *
 from django.views.generic import View 
 # Create your views here.
 
@@ -17,10 +17,39 @@ class About_View(View):
          template = 'about.html'
          return render(request, template)
          
-class Sell_View(View):             
-     def get(self,request):
+class Sell_View(View):
+    def get(self,request):
          template = 'sell.html'
-         return render(request, template)
+         sell_form = sell_product_form()
+
+         context= {
+             'form': sell_form,
+         }
+
+         return render(request, template,context)
+         
+class Detail_product_View(View):
+    def get(self,request):
+         template = 'detail-product.html'
+         sell_form = inquiry_form()
+
+         context= {
+             'form': sell_form,
+         }
+
+         return render(request, template,context)
+
+
+
+# class Detail_product_View(View):
+#     def get(self,request):
+#         template = 'detail-product.html'
+#         # inquiry_form = inquiry_form()
+#         context= {
+#             #  'form': inquiry_form,
+#          }
+         
+#         return render(request, template , context)
 
 class Cart_View(View):             
      def get(self,request):
@@ -37,10 +66,7 @@ class Contact_View(View):
          template = 'contact.html'
          return render(request, template)
 
-class Detail_product_View(View):             
-     def get(self,request):
-         template = 'detail-product.html'
-         return render(request, template)
+
 class Faq_View(View):             
      def get(self,request):
          template = 'faq.html'
